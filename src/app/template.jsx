@@ -1,4 +1,4 @@
-// use 'use client' to use bootstrap js and also add useEffect() snippetbefore return
+// use 'use client' to use bootstrap js and also add useEffect() snippetbefore return   and for event also use client
 'use client';
 import React, { useEffect } from 'react'
 //import karate time function name se karvana

@@ -9,7 +9,8 @@ const EvenHandling = () => {
          onClick={()=>{alert('lick afeem first')}} >
             daabaa do</button>
          <input type="color" 
-         onChange={(e)=>{document.body.style.background=e.target.value ;console.log(e.target.value)}} /> 
+         onChange={(e)=>{document.body.style.background=e.target.value ;console.log(e.target.value)}} />
+         
     </div>
   )
 }

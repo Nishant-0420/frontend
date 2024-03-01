@@ -30,7 +30,8 @@ const TodoList = () => {
                 <div className="card-body">
                     {
                         // taskList.map(n=> <h1>{n.text}</h1> )
-                        taskList.map((n,index)=> <div className='p-4 shadow d-flex justify-content-between mb-2' key={index}>
+                        taskList.map((n,index)=> 
+                        <div className='p-4 shadow d-flex justify-content-between mb-2' key={index}>
                             <p>{n.text}</p>
                             <button className='btn btn-success'> Delete</button>
                             </div> )

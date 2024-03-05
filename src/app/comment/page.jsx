@@ -14,7 +14,7 @@ const Comment = () => {
   return (
     <div className='bg-success'>
         <div className="container">
-            <h1 className='text-center'>COMMENTZZZZ</h1>
+            <h1 className='text-center'>CommentZZZZ</h1>
             <div className="card shadow">
                 <div className="card-header">
                     <input type="text" onKeyDown={com} className='form-control '/>

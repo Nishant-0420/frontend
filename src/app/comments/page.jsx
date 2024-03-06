@@ -22,7 +22,7 @@ const Comment = () => {
     }
   return (
     <div className='container p-5  '>
-        <div><h2 className='text-center'>comment</h2></div>
+        <div><h2 className='text-center'>Comment</h2></div>
         <div className="card mx-5 shadow">
             <div className="card-header p-4 text-bg-info">
                 <input 

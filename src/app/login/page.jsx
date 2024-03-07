@@ -38,7 +38,7 @@ const Login = () => {
                                     <span className="text-primary"> Back</span>
                                 </h1>
                                 <p style={{ color: "hsl(217, 10%, 50.8%)" }}>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+                                    Lorem iqodcdj dolor sit amet consectetur adipisicing elit. Eveniet,
                                     itaque accusantium odio, soluta, corrupti aliquam quibusdam
                                     tempora at cupiditate quis eum maiores libero veritatis? Dicta
                                     facilis sint aliquid ipsum atque?

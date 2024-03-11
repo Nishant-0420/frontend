@@ -1,0 +1,21 @@
+.curvecorner{
+    border-radius: 20px;
+    background-color: whitesmoke;
+    background-image: url('https://e0.pxfuel.com/wallpapers/408/715/desktop-wallpaper-pink-weed-pink-weed-background-on-bat-neon-weed.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.inputcustom{
+    background-color: #cfddeb; /* Default background color */
+    
+}
+.inputcustom:focus {
+    background-color: #a6efa6; /* Custom background color when input is focused */
+}
+.backgroundimage{
+    background-image: url('https://png.pngtree.com/background/20210712/original/pngtree-modern-double-color-futuristic-neon-background-picture-image_1181573.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+

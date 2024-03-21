@@ -1,6 +1,7 @@
  'use client'  
-import { IconHeart } from '@tabler/icons-react';
+import { IconHeart, IconTrash } from '@tabler/icons-react';
 import React, { useEffect, useState } from 'react'
+import toast from 'react-hot-toast';
 
 const Feed = () => {
     const [PostArray, setPostArray] = useState([]);
@@ -25,6 +26,20 @@ const Feed = () => {
       fetchPostData();
     
     }, [])
+
+    const deletePost = (id)=>{
+        fetch('http://localhost:5000/post/delete/'+ id,{
+            method: 'DELETE'
+        }).then((response) => {
+            if(response.status===200){
+                console.log('post deleted')
+                fetchPostData();
+                toast.success('Post deleted successful')
+            }
+        }).catch((err) => {
+            console.log(err)
+        });
+    }
     
   return (
     <div>
@@ -33,9 +48,11 @@ const Feed = () => {
             <hr />
             <div className="col-md-6 mx-auto">
                 {PostArray.map((post)=>{
-                    return <div key ={post.id} className='card shadow' > 
-                    <div className="card-header">
-                        <h3>{post.title}</h3></div>
+                    return <div key ={post._id} className='card shadow' > 
+                    <div className="card-header d-flex justify-content-between">
+                        <h3>{post.title}</h3>
+                        <button className='btn btn-danger' onClick={()=>deletePost(post._id)}><IconTrash/></button>
+                        </div>
                         <img className='card-img-top' src="post.image" alt="" />
                         <div className="card-footer">
                             <div className="d-flex gx-3">

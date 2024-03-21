@@ -14,7 +14,7 @@ const UploadPost = () => {
         },
         onSubmit: (values) => {
             console.log(values);
-            // sending reqest(data) to backend
+            // sending reqest(data) to backend 
             fetch('http://localhost:5000/post/add',{
                 method: 'POST',
                 body : JSON.stringify(values),  //convert js to json

@@ -40,6 +40,20 @@ const Feed = () => {
             console.log(err)
         });
     }
+    const updatePost= (id,dataToUpdate)=>{
+        fetch('http://localhost:5000/post/update/'+id,{
+            method: 'PUT'
+        }).then((result) => {
+            if(response.status===200){
+                
+                fetchPostData();
+                toast.success('Post liked')
+            }
+            
+        }).catch((err) => {
+            console.log(err)
+        });
+    }
     
   return (
     <div>
@@ -53,10 +67,10 @@ const Feed = () => {
                         <h3>{post.title}</h3>
                         <button className='btn btn-danger' onClick={()=>deletePost(post._id)}><IconTrash/></button>
                         </div>
-                        <img className='card-img-top' src="post.image" alt="" />
+                        <img onDoubleClick={() => updatePost(post._id, {likes : post.likes+1})} className='card-img-top' src="post.image" alt=""  />
                         <div className="card-footer">
                             <div className="d-flex gx-3">
-                                <button className='btn btn-outline-success w-100'>{post.likes} <IconHeart/></button>
+                                <button className='btn btn-outline-success w-100' onClick={  () => updatePost(post._id, {likes : post.likes+1}) }>{post.likes} <IconHeart/></button>
                                 <button className='btn btn-outline-success w-100'>{post.share}Share</button>
                         
                             </div>
